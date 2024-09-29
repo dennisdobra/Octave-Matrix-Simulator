@@ -1,100 +1,43 @@
-##### Copyright 2020 Darius Neatu (neatudarius@gmail.com)
-# README check
+# Octave Simulator
 
-## View as webpage
-```
-sudo pip3 install grip
-grip  README.md
-# open http://localhost:6419/
-```
+## Project Overview
 
-## Description
-This is the checker used to automatically grade homeworks at PC CA.
+The **Octave Simulator** is a matrix manipulation software inspired by the functionalities of GNU Octave. It allows users to perform a variety of matrix operations through a command-line interface. The program supports loading, printing, transposing, and performing arithmetic operations on matrices, as well as implementing Strassen's algorithm for matrix multiplication.
 
-The name of the checker is `check`. It is written in `Python 3.6`.
+## Functionalities
 
+### Matrix Operations
 
-## What does it do?
-It will do the multiples steps.
+1. **Load Matrices**:
+   - Users can load matrices into the program by providing the matrix's dimensions and its elements. Each loaded matrix is stored in memory with an associated index.
 
-All steps marked with `[STOP]` are required. If one failed the checker will stop.
-All steps marked with `[OPTIONAL]` are optional and can be disabled from config.
+2. **Print Matrices**:
+   - Users can print matrices stored in memory by referencing their index. The program will display the matrix in a readable format.
 
-1.  `deps`: Check if all dependencies are installed on local system in order to build/run/grade the homerwork.
+3. **Transpose Matrices**:
+   - The program allows the transposition of matrices, switching rows and columns for the specified matrix index.
 
-2. `build`: Build homework.
-	2.1. [STOP] `Makefile`: Check if `Makefile` exists.
-	2.2. [STOP] `make`:  Run `make build` in order to build all binaries.
-	2.3. [OPT]`warnings`:  If warnings are detected, a penalty to final grade is applied.
+4. **Matrix Multiplication**:
+   - Implemented using Strassen's algorithm, the software can multiply two square matrices of dimensions that are powers of two. The resulting matrix is stored in memory with a new index.
+   - Error handling is in place to ensure that multiplication only occurs for compatible matrices.
 
-3. `run`: Run all tests for specified tasks (all or one).
-	3.1 [STOP] `run`: Run task for current test. Continue iff the program exited successfully.
-	3.2 [STOP] `check`: Check if the solution is correction. Continue iff the program found solution for task/at least one subtask.
-	3.3 [OPT ] `valgrind`: Check for memory leaks and errors. If valgrind found problems, the test grade is 0.
+5. **Resize Matrices**:
+   - Users can resize existing matrices by specifying new dimensions and values. The program dynamically adjusts the matrix size while maintaining its data integrity.
 
-	`Note`: This stage is using an explained `legend`:
-	1. `UPS`: Ups, program crashed
-		e.g null pointer dereference, negative or to big array/matrix indices
-	2. `TLE`: Time Limit Exceed
-		e.g. infinit loop or too slow
-	3. `MLE`: Memory Limit Exceed
-		e.g. too much allocated memory (in total or for some segments)
-	3. `MEM_UPS`: Memory leaks or errors
-		e.g. invalid memory access, unfreed dynamic-allocated arrays
-	4. `WA`: Wrong Answer (wrong or partial output)
-		e.g. output is missing or has other value
-	5. `OK`: Everything is OK.
+6. **Sort Matrices**:
+   - The program can sort matrices in memory based on the sum of their elements, allowing users to easily organize their data.
 
-4. `style`: Run coding style checker to automatically report most common mistakes.
+7. **Power of Matrices**:
+   - Users can raise a matrix to a specified power, modifying the matrix in place.
 
-5. `README`: Basic check for reminding students to put a readme file before final submission.
-  	`Note`: If the `README` is missing, a penalty to final grade is applied.
+8. **Release Resources**:
+   - The program provides an option to deallocate all resources and terminate execution, ensuring proper cleanup of memory.
 
-6. `clean`: Remove all generated files by running the `make clean` command.
+### Command Handling
 
-7. `grade`: Prin final grade (which is always non-negative).
+- The program processes various commands from standard input, handling recognized commands effectively and providing error messages for unrecognized commands or invalid operations.
+- Appropriate error messages are displayed for operations that cannot be performed, such as incompatible matrix dimensions or non-existent matrix indices.
 
+## Conclusion
 
-## Installation
-
-The `install.sh` script can be used to install all dependencies for `check`.
-
-Note: Please inspect  the script to see which are the requirements.
-
-```
-sudo ./install.sh
-```
-
-## Usage
-
-- help
-
-```
-usage: check [-h] [--task {ninel,vectsecv,codeinvim,nomogram}]
-             [--legend {True,False}]
-
-check homework
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --task {ninel,vectsecv,codeinvim,nomogram}
-                        task name
-  --legend {True,False}
-                        print legend
-```
-
-- run entire homework
-
-```
-./check
-```
-
-- run only one task
-
-```
-./check --task <task_name>
-```
-
-## Coding style checker
-
-Please read `cs/README.md`.
+The project serves as a robust tool for performing matrix operations, supporting both basic functionalities and advanced features like Strassen's algorithm. It aims to provide a user-friendly command-line experience for matrix manipulation and analysis.
