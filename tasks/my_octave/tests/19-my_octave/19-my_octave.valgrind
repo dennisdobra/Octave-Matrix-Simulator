@@ -1,0 +1,15 @@
+==10717== Memcheck, a memory error detector
+==10717== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10717== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==10717== Command: /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave
+==10717== Parent PID: 10716
+==10717== 
+==10717== 
+==10717== HEAP SUMMARY:
+==10717==     in use at exit: 0 bytes in 0 blocks
+==10717==   total heap usage: 1,711 allocs, 1,711 frees, 1,030,004 bytes allocated
+==10717== 
+==10717== All heap blocks were freed -- no leaks are possible
+==10717== 
+==10717== For lists of detected and suppressed errors, rerun with: -s
+==10717== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

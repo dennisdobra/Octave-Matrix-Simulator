@@ -1,0 +1,63 @@
+==3123== Memcheck, a memory error detector
+==3123== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3123== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==3123== Command: /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave
+==3123== Parent PID: 3122
+==3123== 
+==3123== 
+==3123== Process terminating with default action of signal 2 (SIGINT)
+==3123==    at 0x109309: modulo (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109602: multiply_matrices (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x10A148: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== HEAP SUMMARY:
+==3123==     in use at exit: 724,864 bytes in 605 blocks
+==3123==   total heap usage: 611 allocs, 6 frees, 733,828 bytes allocated
+==3123== 
+==3123== 16 bytes in 1 blocks are still reachable in loss record 1 of 7
+==3123==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x109E1C: resize_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x10A0FF: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== 24 bytes in 1 blocks are still reachable in loss record 2 of 7
+==3123==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x109285: create_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109ED7: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== 24 bytes in 1 blocks are still reachable in loss record 3 of 7
+==3123==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x109285: create_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109530: multiply_matrices (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x10A148: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== 2,400 bytes in 1 blocks are still reachable in loss record 4 of 7
+==3123==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x1092AD: create_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109ED7: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== 2,400 bytes in 1 blocks are still reachable in loss record 5 of 7
+==3123==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x1092AD: create_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109530: multiply_matrices (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x10A148: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== 360,000 bytes in 300 blocks are still reachable in loss record 6 of 7
+==3123==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x1092E2: create_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109ED7: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== 360,000 bytes in 300 blocks are still reachable in loss record 7 of 7
+==3123==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3123==    by 0x1092E2: create_matrix (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x109530: multiply_matrices (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123==    by 0x10A148: main (in /home/student/Desktop/PCLP1/Teme/Tema_2_repetare_local/check_my_octave_v1.1/check_my_octave/my_octave)
+==3123== 
+==3123== LEAK SUMMARY:
+==3123==    definitely lost: 0 bytes in 0 blocks
+==3123==    indirectly lost: 0 bytes in 0 blocks
+==3123==      possibly lost: 0 bytes in 0 blocks
+==3123==    still reachable: 724,864 bytes in 605 blocks
+==3123==         suppressed: 0 bytes in 0 blocks
+==3123== 
+==3123== For lists of detected and suppressed errors, rerun with: -s
+==3123== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
